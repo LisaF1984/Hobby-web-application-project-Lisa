@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby web Application Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="p-3 mb-2 bg-dark text-white"><p class="fst-italic">STARFLEET COMMAND</p></div>
+    <img src="https://th.bing.com/th/id/OIP.LT0NPVM5dXoFqL_W3Gm6ZwHaHa?pid=ImgDet&rs=1">
+
+    <div class="container">     
+        
+    <h3> <p class="fst-italic text-center">Welcome to Starfleet Command </p></h3> 
+    <h3><p class="fst-italic text-center">In collaboration with `The United Federation of Planets`</p></h3>
+    <br>
+    <br>
+    <h4> <p class="font-monospace text-end">This message just in from vulcan ....... "Live long, and propser"</p></h4>
+    <br><h4> <p class="font-monospace">Always remember: "The needs of the many outweigh the needs of the few!" </p></h4>
+    <br> 
+    <br>
+    <div class="container" id="createForm">
+        <form>
+            <div class="mb-3">
+                <button type="button" class="btn btn-warning btn-lg">Create New Officer</button>
+                <br>
+                <br>
+              <label for="starshipnameInput" class="form-label">Starship Name</label>
+              <input type="text" class="form-control" id="StarshipNameInput" aria-describedby="Starship Name Input">
+              <div id="starshipNameHelp" class="form-text">Please enter the name you your starship.</div>
+            
+            </div>
+            <div class="mb-3">
+                <label for="Name" class="form-label"> Officer Name</label>
+                <input type="text" class="form-control" id="OfficerNameInput" aria-describedby="Officer Name Input">
+                <div id="nameHelp" class="form-text">Please enter your name.
+                    <br>
+                    <br>
+
+                </div>
+        
+              <div class="mb-3">
+                <label for="Name" class="form-label"> Starfleet Ranking</label>
+                <input type="text" class="form-control" id="OfficerNameInput" aria-describedby="Officer Name Input">
+                <div id="rankingHelp" class="form-text">Please enter your officail ranking at starfleet.
+                    <br>
+                    <br>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Years" class="form-label"> Years at Starfleet</label>
+                    <input type="text" class="form-control" id="YearsAtStarfleetInput" aria-describedby="Years At Starfleet Input">
+                    <div id="yearsHelp" class="form-text">Please enter how many years you have currently served at starfleet.
+                        <br>
+                        <br>
+                    </div>
+    
+                <div class="form-check form-switch">
+                    <input class="friend-check-input" type="checkbox" id="flexSwitchCheckFriend">
+                    <label class="friend-check-label" for="flexSwitchCheckFriend">Friend of the Romulans? please tick box to confirm yes or leave empty if no.</label>
+                    <br>
+                    <br>
+                  </div>
+                  <div class="mb-3">
+                    <label for="HomePlanet" class="form-label"> Home Planet</label>
+                    <input type="text" class="form-control" id="HomePlanetInput" aria-describedby="Home Planet Input">
+                    <div id="homePlanetHelp" class="form-text">Please enter your home planet.
+                        <br>
+                        <br>
+                    </div>
+              
+                <button type="button" class="btn btn-primary btn-lg">Update Officer</button>
+                <button type="button" class="btn btn-dark btn-lg">Remove Officer</button>
+          </form>
+
+          <div class="cointainer" id="officerdatacontainer">
+
+          <div class="officer">
+            <div class="officer-body">
+              <h5 class="card-title" id="createCard">Officer Centre</h5>
+              <p class="card-text" id="See card"> "See all our officers at starfleet"</p>
+              <a href="#" class="btn btn-warning">Find officer</a>
+              <h5 class="officer-shipName" id="officerShipName">" Ship Name "</h5>
+            </div>
+          </div>
+        </div>
+    </form>
+        <div class="container" id="updateForm">
+            <form>
+                </form>
+
+        <div class="container" id="deleteForm">
+        </form>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
