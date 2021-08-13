@@ -14,6 +14,8 @@ fetch(`http://localhost:9082/getAll`).then((response) => {
 });
 
 let createOfficer = (data) => {
+    console.log(data.OfficerShipName);
+    console.log(data.name);
 
     const OfficerParent = document.querySelector('#OfficerList');
     const childOfficerBody = document.createElement('div');
@@ -26,32 +28,40 @@ let createOfficer = (data) => {
     const childOfficerHomePlanet = document.createElement('h5');
     const childID = document.createElement('h5');
 
-    childOfficerShipName.textContent = "Ship Name: " + data.OfficerShipName
-    childOfficerName.textContent = " Name : " + data.officerName;
-    childOfficerRanking.textContent = "Ranking : " + data.officerRanking;
-    childOfficerYearsAtStarfleet.textContent = "Name: " + data.officerYearsAtStarfleet;
-    childOfficerFriendOfTheRomulans.textContent = "Friend of the Romulans? : " + data.officerFriendOfTheRomulans;
-    childOfficerHomePlanet.textContent = "Home Planet : " + data.officerHomePlanet;
-    childID.textContent = "ID : " + data.item_id;
-    childBody.className = "Officer-body";
+    // "starfleet_id": 2,
+    //     "starship": "enterprise",
+    //     "name": "Burnam",
+    //     "ranking": "Commander",
+    //     "yearsAtStarfleet": "8",
+    //     "friendOfTheRomulans": false,
+    //     "homePlanet": "Earth/vulcan"
+
+    childOfficerShipName.textContent = "starship: " + data.starship
+    childOfficerName.textContent = " name : " + data.name;
+    childOfficerRanking.textContent = "ranking : " + data.ranking;
+    childOfficerYearsAtStarfleet.textContent = "years At Star fleet: " + data.yearsAtStarfleet;
+    childOfficerFriendOfTheRomulans.textContent = "Friend of the Romulans? : " + data.friendOfTheRomulans;
+    childOfficerHomePlanet.textContent = "Home Planet : " + data.homePlanet;
+    childID.textContent = "ID : " + data.starfleet_id;
+    childOfficerBody.className = "Officer-body";
     child.className = "Officer";
 
-    childBody.appendChild(childOfficerShipName);
-    childBody.appendChild(childOfficerName);
-    childBody.appendChild(childOfficerRanking);
-    childBody.appendChild(childOfficerYearsAtStarfleet);
-    childBody.appendChild(childOfficerFriendOfTheRomulans);
-    childBody.appendChild(childOfficerHomePlanet);
-    childBody.appendChild(childID);
+    childOfficerBody.appendChild(childOfficerShipName);
+    childOfficerBody.appendChild(childOfficerName);
+    childOfficerBody.appendChild(childOfficerRanking);
+    childOfficerBody.appendChild(childOfficerYearsAtStarfleet);
+    childOfficerBody.appendChild(childOfficerFriendOfTheRomulans);
+    childOfficerBody.appendChild(childOfficerHomePlanet);
+    childOfficerBody.appendChild(childID);
 
-    child.appendChild(childBody);
+    child.appendChild(childOfficerBody);
     OfficerParent.appendChild(child);
 
     const OfficerStarshipNameInput = document.querySelector('#OfficerStarshipNameInput');
     const OfficerNameInput = document.querySelector('#OfficerNameInput');
     const OfficerRankingInput = document.querySelector('#OfficerRankingInput');
     const OfficerYearsAtStarfleetInput = document.querySelector('#OfficerYearsAtStarfleetInput');
-    const OfficerFriendOfTheRomulansInput = document.querySelector('#flexSwitchCheckFriend');
+    const OfficerFriendOfTheRomulansInput = document.querySelector('#OfficerFriendOfTheRomulansInput');
     const OfficerHomePlanetInput = document.querySelector('#OfficerHomePlanetInput');
     const OfficerIdInput = document.querySelector('#OfficerIdInput');
 
@@ -68,7 +78,7 @@ let createOfficer = (data) => {
     console.log(OfficerIdInput);
     console.log(createButton);
     console.log(updateButton);
-    console.log(removeButton);
+    console.log(clearButton);
 
     let printOutForm = () => {
 
