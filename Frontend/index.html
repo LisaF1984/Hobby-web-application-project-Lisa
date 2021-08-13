@@ -25,11 +25,9 @@
     <div class="container" id="createForm">
         <form>
             <div class="mb-3">
-                <button type="button" class="btn btn-warning btn-lg">Create New Officer</button>
-                <br>
-                <br>
+              
               <label for="starshipnameInput" class="form-label">Starship Name</label>
-              <input type="text" class="form-control" id="StarshipNameInput" aria-describedby="Starship Name Input">
+              <input type="text" class="form-control" id="OfficerStarshipNameInput" aria-describedby="Starship Name Input">
               <div id="starshipNameHelp" class="form-text">Please enter the name you your starship.</div>
             
             </div>
@@ -44,7 +42,7 @@
         
               <div class="mb-3">
                 <label for="Name" class="form-label"> Starfleet Ranking</label>
-                <input type="text" class="form-control" id="OfficerNameInput" aria-describedby="Officer Name Input">
+                <input type="text" class="form-control" id="OfficerRankingInput" aria-describedby="Officer Ranking Input">
                 <div id="rankingHelp" class="form-text">Please enter your officail ranking at starfleet.
                     <br>
                     <br>
@@ -52,49 +50,82 @@
 
                 <div class="mb-3">
                     <label for="Years" class="form-label"> Years at Starfleet</label>
-                    <input type="text" class="form-control" id="YearsAtStarfleetInput" aria-describedby="Years At Starfleet Input">
+                    <input type="text" class="form-control" id="OfficerYearsAtStarfleetInput" aria-describedby="Years At Starfleet Input">
                     <div id="yearsHelp" class="form-text">Please enter how many years you have currently served at starfleet.
                         <br>
                         <br>
                     </div>
     
-                <div class="form-check form-switch">
-                    <input class="friend-check-input" type="checkbox" id="flexSwitchCheckFriend">
-                    <label class="friend-check-label" for="flexSwitchCheckFriend">Friend of the Romulans? please tick box to confirm yes or leave empty if no.</label>
+                <div class="form-check form-switch mb-3">
+                    <input class="friend-check-input" type="checkbox" id="OfficerFriendOfTheRomulansInput">
+                    <label class="friend-check-label" for="officerFriendOfTheRomulans">Friend of the Romulans? please tick box to confirm yes or leave empty if no.</label>
                     <br>
                     <br>
                   </div>
                   <div class="mb-3">
                     <label for="HomePlanet" class="form-label"> Home Planet</label>
-                    <input type="text" class="form-control" id="HomePlanetInput" aria-describedby="Home Planet Input">
+                    <input type="text" class="form-control" id="OfficerHomePlanetInput" aria-describedby="Home Planet Input">
                     <div id="homePlanetHelp" class="form-text">Please enter your home planet.
                         <br>
                         <br>
                     </div>
-              
-                <button type="button" class="btn btn-primary btn-lg">Update Officer</button>
-                <button type="button" class="btn btn-dark btn-lg">Remove Officer</button>
+                    <div class="mb-3">
+                        <label for="OfficerId" class="form-label">Officer ID </label>
+                        <input type="text" class="form-control" id="OfficerIdInput" aria-describedby="Officer ID Input">
+                        <div id="OfficerIdHelp" class="form-text">Please enter Officer ID you wish to update.
+                        </div>   
+                            <br>
+                            <br>      
+                <button type="button" class="btn btn-warning btn-lg" id="createBtn" >Create New Officer</button>
+                <button type="button" class="btn btn-primary btn-lg" id="updateBtn">Update Officer</button>
+                <button type="button" class="btn btn-danger btn-lg" id="clearBtn"> Clear Data </button>
           </form>
 
-          <div class="cointainer" id="officerdatacontainer">
+          <div class="container" id="deleteForm">
+            <h3> Delete items </h3>
+
+            <form>
+                <div class="mb-3"> 
+                    <label for="idInput" class="form-label">ID</label>
+                    <input type="text" class="form-control" id="deleteInput" aria-describedby="id input">
+                    <div id="idHelp" class="form-text">Enter the ID of the item you want to delete</div>
+                </div>
+
+                <button type="button" class="btn btn-dark btn-lg" id="deleteBtn"> Delete Item </button>
+              </form>
+
+        </div>
+
+        </div>
+
+
+             <div class="cointainer" id="officerdatacontainer">
+                <h3> All data in database </h3>
+
+                <br>
+                <br>
+                <div class="container" id="OfficerList">
+    
+                </div>
+    
 
           <div class="officer">
             <div class="officer-body">
-              <h5 class="card-title" id="createCard">Officer Centre</h5>
-              <p class="card-text" id="See card"> "See all our officers at starfleet"</p>
-              <a href="#" class="btn btn-warning">Find officer</a>
-              <h5 class="officer-shipName" id="officerShipName">" Ship Name "</h5>
+              <h5 class="card-title" id="createOfficer">Officer Centre</h5>
+              <p class="card-text" id="See card"> See all our officers at starfleet: </p>
+
+              <h5 class="officer-shipName" id="officerShipName"> Ship Name: </h5>
+              <h5 class="officer-Name" id="officerName"> Name: </h5>
+              <h5 class="officer-Ranking" id="officerRanking"> Ranking </h5>
+              <h5 class="officer-yearsAtStarfleet" id="officeryearsAtStarfleet"> years at Starfleet: </h5>
+              <h5 class="officer-FriendOfTheRomulans" id="officerFriendOfTheRomulans"> Friend of the Romulans: </h5>
+              <h5 class="officer-HomePlanet" id="officerHomePlanet"> Home Planet: </h5>
+              <h5 class="officer-Id" id="officerId"> Officer ID: </h5>
             </div>
           </div>
         </div>
     </form>
-        <div class="container" id="updateForm">
-            <form>
-                </form>
-
-        <div class="container" id="deleteForm">
-        </form>
-</div>
+      
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
