@@ -149,7 +149,7 @@ let createOfficer = (data) => {
 
     let raplaceData = (id) => {
 
-        const Officer = {
+        const replaceOfficer = {
             "starship" : OfficerStarshipNameInput.value,
             "name" : OfficerNameInput.value,
             "ranking" : OfficerRankingInput.value,
@@ -158,6 +158,7 @@ let createOfficer = (data) => {
             "homePlanet" : OfficerHomePlanetInput.value
             };
     
+            console.log(replaceOfficer);
 
         fetch(`http://localhost:9082/replace/${id}`, {
             method: `PUT`, 
@@ -186,12 +187,12 @@ let removeData = (id) => {
     });
 
 }
-    updateButton.addEventListener('click', function() {
-    updateData(idInput.value);
+    replaceButton.addEventListener('click', function() {
+    replaceData(idInput.value);
     })
 
     removeButton.addEventListener('click', function(){
-        deleteData(removeID.value);
+        removeData(removeID.value);
     })
 
     createButton.addEventListener('click', postData);
